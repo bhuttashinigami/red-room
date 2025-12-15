@@ -1,0 +1,12 @@
+streamlit>=1.32.0
+
+# LLM (Gemini)
+langchain>=0.1.16
+langchain-google-genai>=1.0.3
+google-generativeai>=0.5.4
+
+# Data handling
+pydantic>=2.5.3
+
+# Utilities
+python-dotenv>=1.0.1
