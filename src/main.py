@@ -11,9 +11,8 @@ from llm_agent import run_llm_thread
 st.set_page_config(page_title="Traffic Intersection Agent", layout="wide")
 init_db()
 
-# --------------------------------------------------
 # SESSION INITIALIZATION
-# --------------------------------------------------
+
 if "HIGH_TRAFFIC_ROAD" not in st.session_state:
     st.session_state.HIGH_TRAFFIC_ROAD = random.choice(
         ["north", "south", "east", "west"]
@@ -30,9 +29,8 @@ if "agent" not in st.session_state:
 agent = st.session_state.agent
 llm_agent = st.session_state.llm_agent
 
-# --------------------------------------------------
 # UI CONTROLS
-# --------------------------------------------------
+
 st.title("Adaptive Traffic Intersection Agent")
 st.markdown(f"**High Traffic Road:** {agent.high_traffic_road.upper()}")
 
@@ -55,9 +53,8 @@ with col2:
         st.session_state.last_cycle_data = None
         st.rerun()
 
-# --------------------------------------------------
 # STATUS
-# --------------------------------------------------
+
 status_col1, status_col2 = st.columns(2)
 with status_col1:
     st.markdown(f"**Cycle Number:** {agent.cycle_number}")
@@ -66,9 +63,8 @@ with status_col2:
         f"**Status:** {'🟢 Running' if st.session_state.running else '🔴 Paused'}"
     )
 
-# --------------------------------------------------
 # ANALYTICS
-# --------------------------------------------------
+
 if st.session_state.last_cycle_data:
     st.success(
         f"✅ Cycle {st.session_state.last_cycle_data.cycle_number} completed"
@@ -84,9 +80,8 @@ if st.session_state.last_cycle_data:
         f"{st.session_state.last_cycle_data.efficiency_score:.2f}",
     )
 
-# --------------------------------------------------
 # SIMULATION LOOP
-# --------------------------------------------------
+
 if st.session_state.running:
     cycle_complete = agent.run_cycle()
 
