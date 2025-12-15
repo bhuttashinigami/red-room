@@ -9,6 +9,5 @@ pip install -r requirements.txt
 ```
 ## Deployment
 The project is currently live at the following link:
-```bash
+
 https://red-room-qmw6zmx3ds7u6vjqxkbprr.streamlit.app/
-```
