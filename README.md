@@ -7,7 +7,7 @@ You can download the zip file from the repositry.
 ```bash
 pip install -r requirements.txt
 ```
-##Deployment
+## Deployment
 The project is currently live at the following link:
 ```bash
 https://red-room-qmw6zmx3ds7u6vjqxkbprr.streamlit.app/
